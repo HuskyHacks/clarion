@@ -14,7 +14,6 @@ pixel_filename = f"{uuid.uuid4()}.png"
 
 app = Flask(__name__)
 
-# Function to create a single pixel image
 def create_pixel():
     image = Image.new('RGB', (1, 1), color = (255, 255, 255))
     byte_io = BytesIO()
@@ -22,7 +21,6 @@ def create_pixel():
     byte_io.seek(0)
     return byte_io
 
-# Function to get public IP address
 def get_public_ip():
     try:
         response = requests.get('http://ipv4.icanhazip.com', timeout=5)
@@ -33,7 +31,6 @@ def get_public_ip():
         return None
 
 
-# Route to serve the pixel image
 @app.route(f'/{pixel_filename}')
 def pixel():
     # Capture the IP address of the requester
@@ -46,12 +43,11 @@ def pixel():
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
 
-
-    # Serve the pixel image
+        # At this point, you can set up a web hook to signal that soneone is under active AitM attack!
+    
     return send_file(create_pixel(), mimetype='image/png')
 
 def main():
-    # Check if certificate files exist
     if not (os.path.exists('cert.pem') and os.path.exists('key.pem')):
         print("[-] SSL certificates not found. Please generate them using OpenSSL.\n  \\\\--> openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365")
     else:
@@ -66,8 +62,7 @@ def main():
             print(Fore.MAGENTA + "}" + Style.RESET_ALL)
             print()
 
-            app.run(ssl_context=('cert.pem', 'key.pem'), host='0.0.0.0', port=443, debug=True)
-
+            app.run(ssl_context=('cert.pem', 'key.pem'), host='0.0.0.0', port=443, debug=False, use_reloader=False)
 
 if __name__ == "__main__":
     main()
