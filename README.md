@@ -41,7 +41,7 @@ body {
  * Debugger PIN: 422-205-484
 ```
 
-Take this custom CSS pixel element and add it to your Microsoft Online Company Branding as a custom CSS file:
+Take this custom CSS pixel element and add it to your M365 Company Branding as a custom CSS file:
 
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/c94192ed-6b73-43ea-a158-ca34b69f91e2)
 
@@ -50,3 +50,12 @@ Take this custom CSS pixel element and add it to your Microsoft Online Company B
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/f3401d09-1bfc-4154-9971-59b07523d44e)
 
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/f9234950-9353-41d1-8b44-9b23abe69095)
+
+The [M365 Company Branding CSS Schema](https://learn.microsoft.com/en-us/entra/fundamentals/reference-company-branding-css-template) has the list of CSS elements that the M365 login page can use. `.ext-footer` seems to be a good option to trigger the clarion call.
+
+eg. 
+```
+.ext-footer {
+    background-image: url(https://[Public IP]/[pixel name].png);
+    background-size: 0 0;
+}
