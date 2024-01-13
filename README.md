@@ -1,7 +1,7 @@
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your M365 login page
 
-![image](https://github.com/HuskyHacks/clarion/assets/57866415/74121313-26eb-4521-8a8d-34da3d8693c2)
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/58627a15-8beb-43d5-a0f1-4172f9da8653)
 
 ## Warning
 This is **extremely** experimental.
