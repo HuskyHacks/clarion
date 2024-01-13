@@ -43,7 +43,8 @@ def pixel():
         print(f"{Fore.YELLOW}[!] Non-Microsoft referer header detected: {requester_ip}{Style.RESET_ALL}")
         # Print debug information
         print(f"[*] Debug Information:")
-        print(f"[*] Requester IP: {requester_ip}")
+        print(f"[*] Requester IP (user logging in): {requester_ip}")
+        print(f"[*] Referer header (AitM): {referer_header}")
 
 
     # Serve the pixel image
