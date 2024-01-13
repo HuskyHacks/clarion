@@ -40,3 +40,5 @@ body {
  * Debugger is active!
  * Debugger PIN: 422-205-484
 ```
+
+Take this custom CSS pixel element and add it to your Microsoft Online Company Branding as a custom CSS file:
