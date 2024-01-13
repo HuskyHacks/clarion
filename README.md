@@ -2,10 +2,15 @@
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your M365 login page
 
 ## Setup
-For testing, you can use a self-signed certificate. **Important:** Make sure you accept the warning about the invalid certificate in the browser that you want to test if using a self-signed cert. If you don't, the client browser will throw an error when trying to load the remote CSS and will not trigger the clarion call.
+For testing, you can use a self-signed certificate. 
+
 ```
 openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
 ```
+
+**Important:** Make sure you accept the warning about the invalid certificate in the browser that you want to test if using a self-signed cert. If you don't, the client browser will throw an error when trying to load the remote CSS and will not trigger the clarion call.
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/2d66f9aa-09c5-4d15-974e-3f71e2ddcf50)
 
 For production use, you would want a legitimate signed certificate.
 
