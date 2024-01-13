@@ -13,7 +13,7 @@ M365 allows you to inject custom CSS into the M365 login screen through the Comp
 
 We can take advantage of this to detect when a user is logging into an Adversary in the Middle (AitM) proxy like Evilginx that is mimicking your legitimate login page.
 
-Clarion creates a small tracking pixel that we can embed into our custom CSS profile. When a normal login occurs, this CSS is retrieved dynamically and rendered on the M365 login page. When that happens during a routine login, the referer header for the CSS retrieval is "login.microsoft.com"
+Clarion creates and hosts a small tracking pixel that we can embed into our custom company branding CSS file. When a normal login occurs, this CSS is retrieved dynamically and rendered on the M365 login page. When that happens during a routine login, the referer header for the CSS retrieval is "login.microsoft.com"
 
 However, if a threat actor has created an AitM domain and login page, the referer header will be their own domain. If our tracking pixel is ever requested with a referer header that is NOT login.microsoft.com, it is highly likely that someone is logging into a transparent proxy.
 
