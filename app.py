@@ -33,12 +33,10 @@ def get_public_ip():
 
 @app.route(f'/{pixel_filename}')
 def pixel():
-    # Capture the IP address of the requester
     requester_ip = request.remote_addr
     referer_header = request.headers.get('Referer')
     if 'login.microsoftonline.com' not in referer_header:
         print(f"{Fore.YELLOW}[!] Non-Microsoft referer header detected: {requester_ip}{Style.RESET_ALL}")
-        # Print debug information
         print(f"[*] Debug Information:")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
