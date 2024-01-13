@@ -82,3 +82,12 @@ eg.
     background-image: url(https://[Public IP]/[pixel name].png);
     background-size: 0 0;
 }
+```
+
+## Future Work
+I'm willing to bet that this works with login pages for any service that allows you to specify custom CSS. I don't know which ones do, so if you have any ideas, open a PR or issue and let me know!
+
+## Ref & Acknowledgements
+Thank you again to Zolder for the original article on this technique!
+
+- https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/
