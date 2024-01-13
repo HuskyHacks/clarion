@@ -36,7 +36,7 @@ def pixel():
     requester_ip = request.remote_addr
     referer_header = request.headers.get('Referer')
     if 'login.microsoftonline.com' not in referer_header:
-        print(f"{Fore.YELLOW}[!] Non-Microsoft referer header detected: {requester_ip}{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}[!] Non-Microsoft referer header detected: {referer_header}{Style.RESET_ALL}")
         print(f"[*] Debug Information:")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
