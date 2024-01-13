@@ -9,7 +9,7 @@ This is **extremely** experimental.
 ## Concept & Disclaimer
 [This article](https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/) from Zolder describes the concept quite well. This is not my original idea and the credit goes to them for it.
 
-M365 allows you to inject custom CSS into the M365 login screen through the Company Branding settings. Ostensibly, this allows you to put a cool background image on your login page.
+M365 allows you to inject custom CSS into the M365 login screen through the Company Branding settings. Ostensibly, this allows you to put a cool background image on your login page that fits your company branding.
 
 We can take advantage of this to detect when a user is logging into an Adversary in the Middle (AitM) proxy like Evilginx that is mimicking your legitimate login page.
 
