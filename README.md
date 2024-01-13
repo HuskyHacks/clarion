@@ -6,6 +6,19 @@ The clarion call tells you if someone is logging into an AitM proxy that is prox
 ## Warning
 This is **extremely** experimental.
 
+## Concept & Disclaimer
+[This article](https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/) from Zolder describes the concept quite well. This is not my original idea and the credit goes to them it.
+
+M365 allows you to inject custom CSS into the M365 login screen through the Company Branding settings. Ostensibly, this allows you to put a cool background image on your login page.
+
+We can take advantage of this to detect when a user is logging into an Adversary in the Middle (AitM) proxy like Evilginx that is mimicking your legitimate login page.
+
+Clarion creates a small tracking pixel that we can embed into our custom CSS profile. When a normal login occurs, this CSS is retrieved dynamically and rendered on the M365 login page. When that happens during a routine login, the referer header for the CSS retrieval is "login.microsoft.com"
+
+However, if a threat actor has created an AitM domain and login page, the referer header will be their own domain. If our tracking pixel is ever requested with a referer header that is NOT login.microsoft.com, it is highly likely that someone is logging into a transparent proxy.
+
+Zolder uses their own site, [didsomeoneclone.me](https://didsomeoneclone.me/) as their proof of concept. It works like a charm! But I wanted to create the whole system to learn more about it and demonstrate the entire process, start to finish. Thank you to Zolder for their work on this! Really cool concept and great work.
+ 
 ## Setup
 For testing, you can use a self-signed certificate. 
 
