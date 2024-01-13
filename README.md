@@ -32,7 +32,7 @@ Press CTRL+C to quit
 [*] Your public IP address is: [Public IP]
 [*] Embed this pixel in your CSS file with the following code:
 
-body {
+[some CSS element] {
     background-image: url('https://[Public IP]/[pixel name].png');
     background-size: 0 0;
 }
