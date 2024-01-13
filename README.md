@@ -50,5 +50,3 @@ Take this custom CSS pixel element and add it to your Microsoft Online Company B
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/f3401d09-1bfc-4154-9971-59b07523d44e)
 
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/f9234950-9353-41d1-8b44-9b23abe69095)
-
-![image](https://github.com/HuskyHacks/clarion/assets/57866415/be592fb1-16cf-48cc-b5ee-87a080c1b57f)
