@@ -42,3 +42,13 @@ body {
 ```
 
 Take this custom CSS pixel element and add it to your Microsoft Online Company Branding as a custom CSS file:
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/c94192ed-6b73-43ea-a158-ca34b69f91e2)
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/bc24d94b-14d4-4dde-a668-09bf8482d811)
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/f3401d09-1bfc-4154-9971-59b07523d44e)
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/f9234950-9353-41d1-8b44-9b23abe69095)
+
+![image](https://github.com/HuskyHacks/clarion/assets/57866415/be592fb1-16cf-48cc-b5ee-87a080c1b57f)
