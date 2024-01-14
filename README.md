@@ -17,7 +17,10 @@ Clarion creates and hosts a small tracking pixel that we can embed into our cust
 
 However, if a threat actor has created an AitM domain and login page and someone puts their username in to log in, the CSS will get pulled by the transparent proxy and the referer header will be the AitM proxy domain. If our tracking pixel is ever requested with a referer header that is NOT `login.microsoftonline.com`, it is highly likely that someone is logging into a transparent proxy (DISCLAIMER: MAJOR ASSUMPTIONS WITH THIS CONCEPT. DO YOUR OWN TESTING TO MAKE SURE THIS IS THE CASE!).
 
+### So, why Clarion?
 Zolder uses their own site, [didsomeoneclone.me](https://didsomeoneclone.me/) as their proof of concept. It works like a charm! But I wanted to create the whole system to learn more about it and demonstrate the entire process, start to finish. Thank you to Zolder for their work on this! Really cool concept and great work.
+
+Additionally, I'm sure there are people out there that would love to use this detection capability but want to host it on their own infrastructure for privacy reasons. Clarion demonstrates a very simple, naive approach to how one would implement the tech required to alert on AitM attacks in progress.
  
 ## Setup
 For testing, you can use a self-signed certificate. 
